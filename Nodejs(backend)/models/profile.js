@@ -1,6 +1,6 @@
-// models/profile.js
+
 const Sequelize = require('sequelize');
-const sequelize = require('../config/database'); // Create the database connection in this file
+const sequelize = require('../config/database');
 
 const Profile = sequelize.define('profile', {
   name: Sequelize.STRING,
