@@ -1,4 +1,3 @@
-// Function to extract data from the LinkedIn profile page
 function extractData() {
   const name = document.querySelector('.pv-top-card--list > li:first-child').textContent.trim();
   const location = document.querySelector('.pv-top-card--list > li:nth-child(2)').textContent.trim();
@@ -21,7 +20,6 @@ function extractData() {
   return data;
 }
 
-// Function to send data to the API
 function sendDataToAPI(data) {
   fetch("http://localhost:3000/post-data", {
     method: "POST",
@@ -42,6 +40,5 @@ function sendDataToAPI(data) {
   });
 }
 
-// Call the extraction function and send data to the API
 const extractedData = extractData();
 sendDataToAPI(extractedData);
